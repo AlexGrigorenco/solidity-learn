@@ -15,6 +15,39 @@ describe("Payments", () => {
     })
 
     it("should be deployed", async () => {
-        console.log('success!')
-    })
+        expect(await payments.getAddress()).to.be.properAddress;
+    });
+
+    it("should be 0 eth by default", async () => {
+        const balance = await ethers.provider.getBalance(await payments);
+        expect(balance).to.equal(0);
+        console.log('balance:',balance);
+    });
+
+    it("should be possible to send funds", async () => {
+        const sum = 1000;
+        const msg = 'it is transaction';
+
+        const tx = await payments.connect(acc2).pay(msg, {
+            value: sum,
+        });
+        payments.connect(acc2).pay(msg, {
+            value: sum,
+        });
+
+        await tx.wait();
+
+        await expect(() => tx).changeEtherBalances([acc2, payments], [-sum, sum]);
+
+        const balance = await ethers.provider.getBalance(await payments);
+        expect(balance).to.equal(sum*2);
+        console.log('balance:',balance);
+
+        const payment = await payments.getPayments(acc2, 1);
+        console.log("payment", payment);
+        expect(payment.amount).to.eq(sum);
+        expect(payment.message).to.eq(msg);
+        expect(payment.from).to.eq(acc2.address);
+        console.log(acc2.address)   
+    });
 })

@@ -17,8 +17,8 @@ contract Payments {
 
     mapping (address => Balance) public balances;
 
-    function Pay(string memory message) public payable {
-        uint paymentNumber = balances[msg.sender].totalPayments++;
+    function pay(string memory message) public payable {
+        uint paymentNumber = balances[msg.sender].totalPayments;
 
         balances[msg.sender].totalPayments++;
 
