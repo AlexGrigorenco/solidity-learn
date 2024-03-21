@@ -1,0 +1,59 @@
+{
+	"compiler": {
+		"version": "0.8.24+commit.e11b9ed9"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "hash",
+				"outputs": [
+					{
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/Lesson-9.sol": "UnOptimise"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/Lesson-9.sol": {
+			"keccak256": "0x69f0b4a4ae854c6d3474d4f0284724a5ee00e72cb48494b11c46ef3f891db8e6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://9801ed5f26cf203b840c3c231eef0c72003ef7a51cc08e32d12689fc55b7800b",
+				"dweb:/ipfs/QmWJVd474wEGZ2jBG1VWUAm9WkNzmXiAN4F8ak7YEytipK"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,2 @@
+remixd -s /home/mash/Рабочий\ стол/solidity-learn/lesson-9 -u http://127.0.0.1:8080
+
