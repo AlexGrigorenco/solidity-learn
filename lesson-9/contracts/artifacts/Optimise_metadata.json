@@ -7,15 +7,28 @@
 		"abi": [
 			{
 				"inputs": [],
-				"name": "hash",
+				"name": "result",
 				"outputs": [
 					{
-						"internalType": "bytes32",
+						"internalType": "uint256",
 						"name": "",
-						"type": "bytes32"
+						"type": "uint256"
 					}
 				],
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "data",
+						"type": "uint256[]"
+					}
+				],
+				"name": "setResult",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			}
 		],
@@ -47,11 +60,11 @@
 	},
 	"sources": {
 		"contracts/Lesson-9.sol": {
-			"keccak256": "0x69f0b4a4ae854c6d3474d4f0284724a5ee00e72cb48494b11c46ef3f891db8e6",
+			"keccak256": "0x2005c462665a93a013844db5719ffbe7a1b674db9fdb93404234da253be70689",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://9801ed5f26cf203b840c3c231eef0c72003ef7a51cc08e32d12689fc55b7800b",
-				"dweb:/ipfs/QmWJVd474wEGZ2jBG1VWUAm9WkNzmXiAN4F8ak7YEytipK"
+				"bzz-raw://2612ff01ff6b0f88e4eaf2e82b7d5e3d5ccf894a1d730a2317b35cb6b2ba37d6",
+				"dweb:/ipfs/QmUwAB1hJA3kEKh16iDtYP1rMk6tYrSptDk1HN4WyeafQC"
 			]
 		}
 	},
